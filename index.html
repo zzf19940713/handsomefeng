@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function(){
+            $('#fly').children().last().on('click', function(){
+                $("body").animate({"scrollTop" : "0"})
+                console.dir($('body'));
+            });
+            $(document).on('scroll',function(){
+                if($(document).scrollTop()>=170){
+                    $('#nav-wrapper').css({
+                        'position':'fixed',
+                        'top':0,
+                    })
+                    $('#banner').css('margin-top','46px')
+                }else {
+                    $('#nav-wrapper').css({
+                        'position':'static'
+                    })
+                    $('#banner').css('margin-top','0px')
+                }
+            })
+            $('.header-right').children().eq(1).on('click', function(){
+                window.location.href = 'register.html'
+            });
+            $('.header-right').children().eq(2).on('click', function(){
+                window.location.href = 'login.html'
+            });
+            $('#jump').on('click',function(){
+                window.location.href='sindex.html'
+            })
+        })
+    </script>
+</head>
+<body>
+<header id="header-wrapper">
+    <div class="header">
+        <div class="header-left">
+            <a href="#">关于我们</a>
+            <a href="#">商业客户</a>
+            <a href="#">练习客服</a>
+        </div>
+        <div class="header-right">
+            <span>您好,请</span>
+            <a href="#">注册</a>
+            <a href="#">登录</a>
+            <a href="#">QQ登录</a>
+            <a href="#">微博登录</a>
+        </div>
+    </div>
+</header>
+<section id="fly">
+    <a href="#">每日推荐</a>
+    <a href="#">最新优惠</a>
+    <a href="#">团购精选</a>
+    <a href="#">海淘攻略</a>
+    <a href="#">晒物分享</a>
+    <a href="#">全球转运</a>
+    <a href="javascript:void(0)"><i class="iconfont">&#xe612;</i></a>
+</section>
+<section id="Engine-wrapper">
+    <div class="Engine">
+        <div class="Engine-left"></div>
+        <div class="Engine-middle">
+            <div class="search">
+                <i class="iconfont">&#xe603;</i> <input type="text" class="txt" placeholder="搜海淘团购,全球比价和海淘圈经验分享"/>
+                <input type="submit" class="sub" value="搜索"/>
+            </div>
+            <div class="items">
+                <a href="#">Coach</a>
+                <a href="#">鱼油</a>
+                <a href="#">热门海淘</a>
+                <a href="#">新品</a>
+                <a href="#">品牌汇</a>
+                <a href="#">团购精选</a>
+                <a href="#">全球包邮</a>
+            </div>
+        </div>
+        <div class="Engine-right">
+            <div class="shopping">
+                <a href="#">
+                    <i class="iconfont">&#xe60a;</i> <span>购物车</span> <b>0</b>
+                </a>
+            </div>
+            <div class="shoucang">
+                <a href="#"><i class="iconfont">&#xe621;</i> <span>收藏</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="nav-wrapper">
+    <div class="nav">
+        <ul class="left">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">海淘圈</a>
+            </li>
+            <li>
+                <a href="#" id="jump">海淘团购</a>
+            </li>
+            <li>
+                <a href="#">好物比价</a>
+            </li>
+            <li>
+                <a href="#">全球运转</a>
+            </li>
+            <li>
+                <a href="#">全球名站</a>
+            </li>
+            <li>
+                <a href="#">嚎啕达人</a>
+            </li>
+        </ul>
+        <ul class="right">
+            <li>
+                <a href="#">海淘盒子</a>
+            </li>
+            <li>
+                <a href="#">海淘APP</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section id="banner-wrapper">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</section>
+<section id="main-wrapper">
+    <section class="section1">
+        <div class="top">
+            <h3>每日推荐</h3>
+            <span>海淘小编 全球精选</span>
+            <a href="#">更多精选></a>
+        </div>
+        <ul>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">8折+礼包！Nordstrom现在PM契尔氏Kiehl's护肤品全场8折</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">雷达帝星腕表仅3500元！！国内最低1W+起跳！~ RADO 雷达 帝星系列 R15513103 男款机械表 $498（需用码，约￥3540）</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">Snidel手提包免费送！ 日本Sweet杂志7月刊 送Snidel粉色单肩手提包 预售价890日元+支持直邮</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">可么多么新低价59元一只！ Comotomo可么多么 奶瓶 250ml*2个 两色 Prime会员凑单新低￥119</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">小林姐澳洲直播 5月17日，澳洲EAORON新品发布会！微信群现场直播，还有微信红包送哦！</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">欢乐颂安迪同款麦片搭配德运奶粉给你活力一整天 澳新活力早餐篇 让你一天元气满满</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">终于解毒了，J网下单美度机械表，“无税”到手(海量图片)</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">连公安、政府网站都中招！比特币病毒爆发，你所需了解的...</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">限时1天，6pm最新优惠码MOMTREAT 6PM母亲节促销，精选商品额外8折，优惠码放送！</a>
+            </li>
+        </ul>
+    </section>
+    <section class="section2">
+        <div class="top">
+            <h3>每日推荐</h3>
+            <span>海淘小编 全球精选</span>
+            <a href="#">更多分享></a>
+        </div>
+        <ul>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">8折+礼包！Nordstrom现在PM契尔氏Kiehl's护肤品全场8折</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">雷达帝星腕表仅3500元！！国内最低1W+起跳！~ RADO 雷达 帝星系列 R15513103 男款机械表 $498（需用码，约￥3540）</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">Snidel手提包免费送！ 日本Sweet杂志7月刊 送Snidel粉色单肩手提包 预售价890日元+支持直邮</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">可么多么新低价59元一只！ Comotomo可么多么 奶瓶 250ml*2个 两色 Prime会员凑单新低￥119</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">小林姐澳洲直播 5月17日，澳洲EAORON新品发布会！微信群现场直播，还有微信红包送哦！</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">欢乐颂安迪同款麦片搭配德运奶粉给你活力一整天 澳新活力早餐篇 让你一天元气满满</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">终于解毒了，J网下单美度机械表，“无税”到手(海量图片)</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">连公安、政府网站都中招！比特币病毒爆发，你所需了解的...</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">限时1天，6pm最新优惠码MOMTREAT 6PM母亲节促销，精选商品额外8折，优惠码放送！</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">终于解毒了，J网下单美度机械表，“无税”到手(海量图片)</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">连公安、政府网站都中招！比特币病毒爆发，你所需了解的...</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">限时1天，6pm最新优惠码MOMTREAT 6PM母亲节促销，精选商品额外8折，优惠码放送！</a>
+            </li>
+        </ul>
+    </section>
+    <section class="section3">
+        <div class="top">
+            <h3>团购专题</h3>
+            <span>海淘团购 超值特卖</span>
+            <a href="#">更多团购></a>
+        </div>
+        <ul>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">8折+礼包！Nordstrom现在PM契尔氏Kiehl's护肤品全场8折</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">雷达帝星腕表仅3500元！！国内最低1W+起跳！~ RADO 雷达 帝星系列 R15513103 男款机械表 $498（需用码，约￥3540）</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">Snidel手提包免费送！ 日本Sweet杂志7月刊 送Snidel粉色单肩手提包 预售价890日元+支持直邮</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">可么多么新低价59元一只！ Comotomo可么多么 奶瓶 250ml*2个 两色 Prime会员凑单新低￥119</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">小林姐澳洲直播 5月17日，澳洲EAORON新品发布会！微信群现场直播，还有微信红包送哦！</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">欢乐颂安迪同款麦片搭配德运奶粉给你活力一整天 澳新活力早餐篇 让你一天元气满满</a>
+            </li>
+        </ul>
+    </section>
+    <section class="section4">
+        <div class="top">
+            <h3>海淘攻略</h3>
+            <span>全球海淘 经验分享</span>
+            <a href="#">更多经验></a>
+        </div>
+        <ul>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">8折+礼包！Nordstrom现在PM契尔氏Kiehl's护肤品全场8折</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">雷达帝星腕表仅3500元！！国内最低1W+起跳！~ RADO 雷达 帝星系列 R15513103 男款机械表 $498（需用码，约￥3540）</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">Snidel手提包免费送！ 日本Sweet杂志7月刊 送Snidel粉色单肩手提包 预售价890日元+支持直邮</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">可么多么新低价59元一只！ Comotomo可么多么 奶瓶 250ml*2个 两色 Prime会员凑单新低￥119</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">小林姐澳洲直播 5月17日，澳洲EAORON新品发布会！微信群现场直播，还有微信红包送哦！</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">欢乐颂安迪同款麦片搭配德运奶粉给你活力一整天 澳新活力早餐篇 让你一天元气满满</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">终于解毒了，J网下单美度机械表，“无税”到手(海量图片)</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">连公安、政府网站都中招！比特币病毒爆发，你所需了解的...</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">限时1天，6pm最新优惠码MOMTREAT 6PM母亲节促销，精选商品额外8折，优惠码放送！</a>
+            </li>
+        </ul>
+    </section>
+    <section class="section5">
+        <div class="top">
+            <h3>海淘晒物</h3>
+            <span>晒物分享 更多乐趣</span>
+            <a href="#">更多晒物></a>
+        </div>
+        <ul>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">8折+礼包！Nordstrom现在PM契尔氏Kiehl's护肤品全场8折</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">雷达帝星腕表仅3500元！！国内最低1W+起跳！~ RADO 雷达 帝星系列 R15513103 男款机械表 $498（需用码，约￥3540）</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">Snidel手提包免费送！ 日本Sweet杂志7月刊 送Snidel粉色单肩手提包 预售价890日元+支持直邮</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">可么多么新低价59元一只！ Comotomo可么多么 奶瓶 250ml*2个 两色 Prime会员凑单新低￥119</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">小林姐澳洲直播 5月17日，澳洲EAORON新品发布会！微信群现场直播，还有微信红包送哦！</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">欢乐颂安迪同款麦片搭配德运奶粉给你活力一整天 澳新活力早餐篇 让你一天元气满满</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">终于解毒了，J网下单美度机械表，“无税”到手(海量图片)</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">连公安、政府网站都中招！比特币病毒爆发，你所需了解的...</a>
+            </li>
+            <li>
+                <a href="#"></a>
+                <a href="#" class="text">限时1天，6pm最新优惠码MOMTREAT 6PM母亲节促销，精选商品额外8折，优惠码放送！</a>
+            </li>
+        </ul>
+    </section>
+</section>
+<footer id="footer-wrapper">
+    <div class="footer">
+        <div class="mya">
+            <a href="#">关于我们</a>
+            <a href="#">联系我们</a>
+            <a href="#">战略合作</a>
+            <a href="#">团购供应商</a>
+            <a href="#">商家入驻</a>
+            <a href="#">友情链接</a>
+            <a href="#">商务合作</a>
+            <a href="#">加入我们</a>
+        </div>
+        <p>客服热线 <span>400-850-0020</span> ©2017 海淘网 沪ICP备14025008号</p>
+        <div class="police">
+            <a href="#"></a>
+            <img src="images/gongshangicon.gif" alt="">
+            <p>网安备31011502002285</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

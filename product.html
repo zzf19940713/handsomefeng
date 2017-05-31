@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>子页</title>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index6.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script>
+        $(function(){
+            $('#fly').children().last().on('click', function(){
+                $('body').animate({
+                    'scrollTop' : '0'
+                })
+            })
+            $('#cart').on('click', function(){
+                window.location.href = 'cart.html'
+            })
+        })
+    </script>
+</head>
+<body>
+<header id="header-wrapper">
+    <div class="header">
+        <div class="header-left">
+            <a href="#">关于我们</a>
+            <a href="#">商业客户</a>
+            <a href="#">练习客服</a>
+        </div>
+        <div class="header-right">
+            <span>您好,请</span>
+            <a href="#">注册</a>
+            <a href="#">登录</a>
+            <a href="#">QQ登录</a>
+            <a href="#">微博登录</a>
+        </div>
+    </div>
+</header>
+<section id="fly">
+    <a href="#"><span>海淘圈</span></a>
+    <a href="#"><span>收藏它</span></a>
+    <a href="#"><span>3赞</span></a>
+    <a href="#"><span>爱分享</span></a>
+    <a href="#"><span>1853</span></a>
+    <a href="javascript:void(0)"><i class="iconfont">&#xe612; <span>回顶部</span></i></a>
+</section>
+<section id="Engine-wrapper">
+    <div class="Engine">
+        <div class="Engine-left"></div>
+        <div class="Engine-middle">
+            <div class="search">
+                <i class="iconfont">&#xe603;</i> <input type="text" class="txt" placeholder="搜海淘团购,全球比价和海淘圈经验分享"/>
+                <input type="submit" class="sub" value="搜索"/>
+            </div>
+            <div class="items">
+                <a href="#">Coach</a>
+                <a href="#">鱼油</a>
+                <a href="#">热门海淘</a>
+                <a href="#">新品</a>
+                <a href="#">品牌汇</a>
+                <a href="#">团购精选</a>
+                <a href="#">全球包邮</a>
+            </div>
+        </div>
+        <div class="Engine-right">
+            <div class="shopping">
+                <a href="#">
+                    <i class="iconfont">&#xe60a;</i> <span>购物车</span> <b>0</b>
+                </a>
+            </div>
+            <div class="shoucang">
+                <a href="#"><i class="iconfont">&#xe621;</i> <span>收藏</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="nav-wrapper">
+    <div class="nav">
+        <ul class="left">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">海淘圈</a>
+            </li>
+            <li>
+                <a href="#">海淘团购</a>
+            </li>
+            <li>
+                <a href="#">好物比价</a>
+            </li>
+            <li>
+                <a href="#">全球运转</a>
+            </li>
+            <li>
+                <a href="#">全球名站</a>
+            </li>
+            <li>
+                <a href="#">嚎啕达人</a>
+            </li>
+        </ul>
+        <ul class="right">
+            <li>
+                <a href="#">海淘盒子</a>
+            </li>
+            <li>
+                <a href="#">海淘APP</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section id="main-wrapper">
+    <div class="main">
+        <div class="details">
+            <div class="left">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    </ol>
+                    <ul class="carousel-inner" role="listbox">
+                        <li class="item active" style="background:url(images/lunbo1.jpg) 50% 50% no-repeat;background-size:100%"></li>
+                        <li class="item" style="background:url(images/lunbo2.jpg) 50% 50% no-repeat;background-size:100%"></li>
+                        <li class="item" style="background:url(images/lunbo3.jpg) 50% 50% no-repeat;background-size:100%"></li>
+                        <li class="item" style="background:url(images/lunbo4.jpg) 50% 50% no-repeat;background-size:100%"></li>
+                    </ul>
+                </div>
+                <a href="#">全球比价</a>
+            </div>
+            <div class="middle">
+                <span>品牌|</span>
+                <a href="#">美迪惠尔</a>
+                <br/>
+                <div class="title">
+                    <a href="#">包邮包税 韩国直邮</a>
+                    【本店爆款】可莱丝 MEDIHEAL 美迪恵尔 M版 水库面膜 25ml*10片/盒
+                </div>
+                <span class="baoyou">包邮</span>
+                <p>补水网红，人人爱用！韩国MBS、KBS、SBS三大电视台共同推荐！销量超过1000万片！NMF天然保湿因子强力补水，每敷一片相当于做一次深层补水SPA。收缩毛孔，保湿锁水、晒后镇静，献给缺水的你。</p>
+                <div class="choose">
+                    <p>当前售价：￥<span>79</span></p>
+                    <p>发货地点:韩国 <span>派送运费</span></p>
+                    <p>发货时间：一般第二个工作日配货</p>
+                    <div>水库面膜</div>
+                    <div>竹炭面膜</div>
+                    <a href="#" id="cart">放入购物车</a>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+    </div>
+</section>
+<footer id="footer-wrapper">
+    <div class="footer">
+        <div class="mya">
+            <a href="#">关于我们</a>
+            <a href="#">联系我们</a>
+            <a href="#">战略合作</a>
+            <a href="#">团购供应商</a>
+            <a href="#">商家入驻</a>
+            <a href="#">友情链接</a>
+            <a href="#">商务合作</a>
+            <a href="#">加入我们</a>
+        </div>
+        <p>客服热线 <span>400-850-0020</span> ©2017 海淘网 沪ICP备14025008号</p>
+        <div class="police">
+            <a href="#"></a>
+            <img src="images/gongshangicon.gif" alt="">
+            <p>网安备31011502002285</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

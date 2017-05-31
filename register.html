@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/index3.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function(){
+            var oIpts = document.getElementsByTagName('input');
+            var flag = true;
+            var num = parseInt(Math.random() * 10000);
+            var a = parseInt(num / 1000);
+            var b = parseInt(num / 100 % 10);
+            var c = parseInt(num / 10 % 10);
+            var d = num % 10;
+            var str6 = a + '' + b + '' + c + '' + d + '';
+            $('#yzm').html(str6);
+            $('#yzm').click(function(){
+                num = parseInt(Math.random() * 10000);
+                var a = parseInt(num / 1000);
+                var b = parseInt(num / 100 % 10);
+                var c = parseInt(num / 10 % 10);
+                var d = num % 10;
+                str6 = a + '' + b + '' + c + '' + d + '';
+                $('#yzm').html(str6)
+            });
+            console.log(oIpts[7]);
+            oIpts[7].onclick = function(){
+                var str1 = oIpts[2].value;
+                var str2 = oIpts[3].value;
+                var str3 = oIpts[4].value;
+                var str4 = oIpts[5].value;
+                var str5 = oIpts[6].value;
+                var reg1 = /^[A-Za-z]\w{5,17}$/;//以字母开头，且长度为6到18位
+                var reg2 = /^\w{6,12}$/;//密码长度为6到12位，且必须不能由纯数字组成
+                var reg3 = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+                if(!reg3.test(str4)){
+                    $('#warn').fadeIn(1000, function(){
+                        $('#warn').fadeOut(1000)
+                    }).text('邮箱不对哦');
+                    flag = false;
+                }
+                if(!reg2.test(str2)){
+                    $('#warn').fadeIn(1000, function(){
+                        $('#warn').fadeOut(1000)
+                    }).text('密码格式不对');
+                    flag = false;
+                }
+                if(!reg2.test(str3)){
+                    $('#warn').fadeIn(1000, function(){
+                        $('#warn').fadeOut(1000)
+                    }).text('密码格式不对');
+                    flag = false;
+                }
+                if(str2 != str3){
+                    $('#warn').fadeIn(1000, function(){
+                        $('#warn').fadeOut(1000)
+                    }).text('两次密码不一致');
+                    flag = false;
+                }
+                if(!reg1.test(str1)){
+                    $('#warn').fadeIn(1000, function(){
+                        $('#warn').fadeOut(1000)
+                    }).text('用户名不正确');
+                    flag = false;
+                }
+                if(str5 != str6){
+                    $('#warn').fadeIn(1000, function(){
+                        $('#warn').fadeOut(1000)
+                    }).text('验证码不正确');
+                    flag = false;
+                }
+                if(flag){
+                    $.ajax({
+                        url : "http://localhost/phpday01/server/reg.php",
+                        type : "post",
+                        data : $('#myForm').serialize(),
+                        success : function(res){
+                            if(JSON.parse(res).status==1){
+                                window.location.href = 'index.html'
+                                alert(JSON.parse(res).msg);
+                            }else{
+                                alert(JSON.parse(res).msg);
+                            }
+                        }
+                    });
+
+                }
+            };
+            $('#login1').click(function(){
+                window.location.href = 'login.html'
+            });
+
+        })
+    </script>
+</head>
+<body>
+<header id="header-wrapper">
+    <div class="header">
+        <div class="header-left">
+            <a href="#">关于我们</a>
+            <a href="#">商业客户</a>
+            <a href="#">练习客服</a>
+        </div>
+        <div class="header-right">
+            <span>您好,请</span>
+            <a href="#">注册</a>
+            <a href="#">登录</a>
+            <a href="#">QQ登录</a>
+            <a href="#">微博登录</a>
+        </div>
+    </div>
+</header>
+<section id="Engine-wrapper">
+    <div class="Engine">
+        <div class="Engine-left"></div>
+        <div class="Engine-middle">
+            <div class="search">
+                <i class="iconfont">&#xe603;</i> <input type="text" class="txt" placeholder="搜海淘团购,全球比价和海淘圈经验分享"/>
+                <input type="submit" class="sub" value="搜索"/>
+            </div>
+            <div class="items">
+                <a href="#">Coach</a>
+                <a href="#">鱼油</a>
+                <a href="#">热门海淘</a>
+                <a href="#">新品</a>
+                <a href="#">品牌汇</a>
+                <a href="#">团购精选</a>
+                <a href="#">全球包邮</a>
+            </div>
+        </div>
+        <div class="Engine-right">
+            <div class="shopping">
+                <a href="#">
+                    <i class="iconfont">&#xe60a;</i> <span>购物车</span> <b>0</b>
+                </a>
+            </div>
+            <div class="shoucang">
+                <a href="#"><i class="iconfont">&#xe621;</i> <span>收藏</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="nav-wrapper">
+    <div class="nav">
+        <ul class="left">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">海淘圈</a>
+            </li>
+            <li>
+                <a href="#">海淘团购</a>
+            </li>
+            <li>
+                <a href="#">好物比价</a>
+            </li>
+            <li>
+                <a href="#">全球运转</a>
+            </li>
+            <li>
+                <a href="#">全球名站</a>
+            </li>
+            <li>
+                <a href="#">嚎啕达人</a>
+            </li>
+        </ul>
+        <ul class="right">
+            <li>
+                <a href="#">海淘盒子</a>
+            </li>
+            <li>
+                <a href="#">海淘APP</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section id="login">
+    <div class="inner">
+        <img src="images/penguin_06.png"/>
+        <div class="content">
+            <p>简单注册</p>
+            <div class="formarea">
+                <form id="myForm">
+                    登录账户:<input type="text" placeholder="用户名" name="loginName"/><br/> 输入密码:<input type="password" placeholder="密码" name="loginPwd"/><br/> 确认密码:<input type="password" placeholder="确认密码" name="loginPwd1"/><br/> 电子邮箱:<input type="text" placeholder="请输入Email邮箱" name="userEmail"/><br/>
+                </form>
+                <input type="text" placeholder="验证码" id="yanzheng"/>
+                <span class="yzm" id="yzm" style="cursor:pointer"></span><br/>
+                <input type="submit" value="立即加入" style="cursor:pointer" id="sub"/>
+                <div class="share">
+                    <a href="#" class="qq"></a>
+                    <a href="#" class="weibo"></a>
+                </div>
+                <div class="solve">
+                    <a href="#" id="login1">立即登录</a>
+                    <a href="#">忘记密码</a>
+                </div>
+                <p id="warn"></p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer-wrapper">
+    <div class="footer">
+        <div class="mya">
+            <a href="#">关于我们</a>
+            <a href="#">联系我们</a>
+            <a href="#">战略合作</a>
+            <a href="#">团购供应商</a>
+            <a href="#">商家入驻</a>
+            <a href="#">友情链接</a>
+            <a href="#">商务合作</a>
+            <a href="#">加入我们</a>
+        </div>
+        <p>客服热线 <span>400-850-0020</span> ©2017 海淘网 沪ICP备14025008号</p>
+        <div class="police">
+            <a href="#"></a>
+            <img src="images/gongshangicon.gif" alt="">
+            <p>网安备31011502002285</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
